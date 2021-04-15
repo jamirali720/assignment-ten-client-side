@@ -12,7 +12,7 @@ const CheckOut = () => {
 
 
         useEffect(() => { 
-            fetch('http://localhost:8080/getBooks/'+id)
+            fetch('https://hidden-retreat-56623.herokuapp.com/getBooks/'+id)
             .then(res => res.json())
             .then(book => setBookDetail(book[0]))   
         
@@ -26,7 +26,7 @@ const CheckOut = () => {
           const buyerDetails = {...loggedInUser, ...bookDetail, buyTime: new Date().toDateString()}
      
       
-            fetch('http://localhost:8080/buyerInfo', {
+            fetch('https://hidden-retreat-56623.herokuapp.com/buyerInfo', {
                     method: 'POST',
                     body: JSON.stringify(buyerDetails),
                     headers: {'Content-type': 'application/json; charset=UTF-8',},

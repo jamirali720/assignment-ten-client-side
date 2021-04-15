@@ -4,7 +4,7 @@ import BookDetails from './BookDetails';
 const ManagePage = () => {
     const [manageBooks, setManageBooks] = useState([])
    useEffect(() => {
-        fetch('http://localhost:8080/getAllBooks')
+        fetch('https://hidden-retreat-56623.herokuapp.com/getAllBooks')
         .then(res => res.json())
         .then(books => setManageBooks(books))   
     

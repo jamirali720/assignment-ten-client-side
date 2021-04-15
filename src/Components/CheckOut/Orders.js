@@ -7,7 +7,7 @@ const Orders = () => {
     const [orderBooks, setOrderBooks] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:8080/getBuyerInfo?email=${email}`)   
+        fetch(`https://hidden-retreat-56623.herokuapp.com/getBuyerInfo?email=${email}`)   
         .then(res => res.json())
         .then(results => setOrderBooks(results))   
      

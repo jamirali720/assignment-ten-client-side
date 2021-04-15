@@ -24,7 +24,7 @@ const AddBook = () => {
             imageURL: imageURL
         }
         console.log(userData);
-        fetch('http://localhost:8080/addBook', {
+        fetch('https://hidden-retreat-56623.herokuapp.com/addBook', {
                 method: 'POST',
                 body: JSON.stringify(userData),
                 headers: {'Content-type': 'application/json; charset=UTF-8',},
@@ -63,7 +63,7 @@ const AddBook = () => {
             
             <div className="sidebar">
                     <h4>Online Book Seller</h4>
-                    <a  href="http://localhost:8080/"><FontAwesomeIcon icon={faThLarge} />Manage Books</a>                  
+                    <a  href="https://hidden-retreat-56623.herokuapp.com/"><FontAwesomeIcon icon={faThLarge} />Manage Books</a>                  
                     <Link to="/addBook"><FontAwesomeIcon icon={faPlus} />Add book</Link>              
                     <Link to="#"><FontAwesomeIcon icon={faPen} /> Edit Book</Link>              
              
